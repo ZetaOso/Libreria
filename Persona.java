@@ -10,7 +10,7 @@ public class Persona {
 	public Persona(String nombre, int edad) {
 		this.nombre = nombre;
 		this.edad = edad;
-		ArrayList<Libro> listaLibrosPrestados = new ArrayList<Libro>();
+		this. listaLibrosPrestados = new ArrayList<Libro>();
 	}
 
 	public Persona(String nombre, int edad, ArrayList<Libro> listaLibrosPrestados) {
@@ -51,7 +51,7 @@ public class Persona {
 	}
 	public void devolverLibro(Libro libro) {
 		
-		if (listaLibrosPrestados.contains(libro)) {
+		if (listaLibrosPrestados.contains(libro) || listaLibrosPrestados != null ) {
 			listaLibrosPrestados.remove(libro);
 		}
 	}

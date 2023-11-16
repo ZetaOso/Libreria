@@ -9,17 +9,15 @@ public class Libro {
 	private String anioPublicacion;
 	private String genero;
 	private int numPaginas;
-	private boolean prestado;
 
 	public Libro() {
 		super();
 	}
 
-	public Libro(String titulo, String autor, String anioPublicacion, String genero, int numPaginas,
-			boolean prestado) {
-		super();
+	public Libro(String titulo, String autor, String anioPublicacion, String genero, int numPaginas) {
+		
 		this.titulo = titulo;
-		Autor = autor;
+		this.Autor = autor;
 		this.anioPublicacion = anioPublicacion;
 		this.genero = genero;
 		this.numPaginas = numPaginas;
@@ -64,14 +62,6 @@ public class Libro {
 	public void setNumPaginas(int numPaginas) {
 		this.numPaginas = numPaginas;
 	}
-
-	public boolean isPrestado() {
-		return prestado;
-	}
-
-	public void setPrestado(boolean prestado) {
-		this.prestado = prestado;
-	}
 	
 	
 
@@ -93,19 +83,17 @@ public class Libro {
 		return Objects.equals(titulo, other.titulo);
 	}
 
+	
+@Override
+	public String toString() {
+		return "Libro [titulo=" + titulo + ", Autor=" + Autor + ", anioPublicacion=" + anioPublicacion + ", genero="
+				+ genero + ", numPaginas=" + numPaginas + "]";
+	}
+
 public String ObtenerInformacionDelLibro() {
-	return "Libro [titulo=" + titulo + ", Autor=" + Autor + ", anioPublicacion=" + anioPublicacion + ", genero="
-			+ genero + ", numPaginas=" + numPaginas +"]";
+	return "Libro [titulo=" + titulo + "\n Autor=" + Autor + "\n Año de Publicacion=" + anioPublicacion + "\n Genero="
+			+ genero + "\n Número de Páginas=" + numPaginas +"]\n";
 }
-
-	public boolean prestarLibro() {
-		return this.prestado = true;
-	}
-
-	public boolean devolverLibro() {
-		return this.prestado = false;
-	}
-
 	
 
 }
